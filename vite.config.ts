@@ -1,12 +1,14 @@
 import { defineConfig } from "vite";
 import viteTsconfigPaths from "vite-tsconfig-paths";
-import commonjs from "vite-plugin-commonjs";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [commonjs(), viteTsconfigPaths()],
+  plugins: [viteTsconfigPaths()],
   base: "/slider/",
-  build: { chunkSizeWarningLimit: 1000 },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    commonjsOptions: { transformMixedEsModules: true },
+  },
   server: {
     open: true,
   },
