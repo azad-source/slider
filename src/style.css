@@ -1,0 +1,66 @@
+.wrapper {
+    position: relative;
+    box-sizing: border-box;
+    background-color: #333;
+    /* width: 400px; */
+    /* height: 300px; */
+    padding: 20px;
+}
+
+.wrapper_loading {
+    position: relative;
+    border: 1px solid black;
+}
+
+.wrapper_loading::after {
+    position: absolute;
+    content: 'Loading ...';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 14px;
+    font-size: 30px;
+    border-radius: 6px;
+    background-color: rgb(164, 67, 67);
+    opacity: 0.6;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn:active {
+    opacity: 1;
+}
+
+.leftBtn {
+    left: 10px;
+}
+
+.rightBtn {
+    right: 10px;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.imageWrapper img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
