@@ -1,7 +1,7 @@
 import "./style.css";
 import { createClient } from "pexels";
 
-const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey = import.meta.env.VITE_PIXELS_API_KEY;
 
 const client = createClient(apiKey);
 
