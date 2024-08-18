@@ -1,9 +1,9 @@
 import "./style.css";
-import { createClient } from "pexels";
+import * as pixel from "pexels";
 
 const apiKey = import.meta.env.VITE_PIXELS_API_KEY;
 
-const client = createClient(apiKey);
+const client = pixel.createClient(apiKey);
 
 interface ISlider {
   root?: HTMLElement | null;
